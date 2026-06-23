@@ -130,6 +130,8 @@
             "group": "关于我们",
             "pages": [
               "community/about",
+              "community/join-collection",
+              "community/skill-branch",
               "community/mentors",
               "community/a416-lab",
               "community/discord",
@@ -189,6 +191,16 @@
           "anchor": "ROBOCON 官网",
           "href": "https://www.cnrobocon.net/",
           "icon": "robot"
+        },
+        {
+          "anchor": "SKill 分支",
+          "href": "https://gitee.com/darrenpig/new_energy_coder_club/tree/SKill/",
+          "icon": "book-open"
+        },
+        {
+          "anchor": "加入收集",
+          "href": "/community/join-collection",
+          "icon": "user-plus"
         }
       ]
     }

@@ -30,7 +30,7 @@
             "pages": [
               "quickstart",
               "development",
-              "nec_quickstart/README"
+              "nec_quickstart/about"
             ]
           },
           {
@@ -73,8 +73,8 @@
           {
             "group": "模板与规范",
             "pages": [
-              "templates/README_PROJECT_TEMPLATE",
-              "templates/README_COMPETITION_TEMPLATE"
+              "templates/project-template",
+              "templates/competition-template"
             ]
           },
           {
@@ -110,11 +110,11 @@
           {
             "group": "CURC 2026",
             "pages": [
-              "curc26/mechanical-sig/README",
+              "curc26/mechanical-sig/about",
               "curc26/mechanical-sig/mechanical",
               "curc26/mechanical-sig/electrical",
-              "curc26/vision-sig/README",
-              "curc26/operation-sig/README"
+              "curc26/vision-sig/about",
+              "curc26/operation-sig/about"
             ]
           },
           {
@@ -133,7 +133,7 @@
               "community/mentors",
               "community/a416-lab",
               "community/discord",
-              "community/README"
+              "community/story"
             ]
           },
           {
@@ -144,14 +144,14 @@
               "SUPPORT",
               "SECURITY",
               "community/maintainers",
-              "community/TEAM",
+              "community/team",
               "community/weekly"
             ]
           },
           {
             "group": "贡献指南",
             "pages": [
-              "CONTRIBUTING",
+              "contributing",
               "contributing/guidelines",
               "contributing/workflow",
               "contributing/code-style"

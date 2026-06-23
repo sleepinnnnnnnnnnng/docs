@@ -162,7 +162,7 @@
       {
         "tab": "关于",
         "pages": [
-          "README",
+          "about",
           "ROADMAP",
           "resources"
         ]

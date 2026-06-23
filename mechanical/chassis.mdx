@@ -1,6 +1,6 @@
 ---
 title: '底盘设计'
-description: '机器人底盘设计与选型指南'
+description: '机器人底盘设计与选型指南，含 OpenTpuOmniWheel 开源全向轮资料'
 ---
 
 ## 底盘类型对比
@@ -97,6 +97,68 @@ void mecanum_ik(float vx, float vy, float omega,
 ├── 悬挂：独立弹簧减震
 └── 材料：铝合金 6061
 ```
+
+## OpenTpuOmniWheel 开源全向轮
+
+本章节导入自 [Dadingdang/OpenTpuOmniWheel](https://github.com/Dadingdang/OpenTpuOmniWheel) 项目，为 NEC 机器人底盘设计提供全向轮选型与自制参考。
+
+### 项目简介
+
+OpenTpuOmniWheel 是 DingLAB 开源的全向轮设计参考，主要面向 RoboMaster 等机器人竞赛场景。项目针对市售全向轮滚子"价格与性能不可兼得"的痛点，提供了自制聚氨酯/橡胶滚子的方案。
+
+### 市售方案对比
+
+| 方案 | 单价 | 特点 | 备注 |
+|------|------|------|------|
+| 航发滚子 | 约 16 元/个 | 摩擦力高，但不耐用 | 一辆车 1792 元 |
+| 轮趣滚子 | 约 6 元/个 | 偏硬，摩擦力不足 | 性能一般 |
+| OpenTpuOmniWheel 自制 | 5.5 / 9 元/个 | 聚氨酯/橡胶可选，含轴承、销钉、垫片 | 性价比高 |
+
+### 设计规格
+
+- **适用全向轮直径**：150 mm
+- **滚子尺寸**：与航发滚子相同
+- **滚子数量**：14 个/组，两组共 28 个
+- **两组碳板间距**：11 mm
+- **板材堆叠总厚度**：29 mm（3+3+3+11+3+3+3）
+- **推荐固定螺丝**：M3×35
+
+### 材料建议
+
+- **50A 聚氨酯**：耐用性优于橡胶，光滑地面摩擦力更好
+- **橡胶**：地胶场地摩擦力优于聚氨酯
+
+### 装配要点
+
+- 滚子由 2 个 **3×8×4 轴承** 支撑
+- 滚子与碳板之间使用 2 个 **铝 3.4×6×2 垫片**
+- 销钉/轴使用 3 个 3 mm 板材夹持
+- 建议使用 **M3×13** 螺丝固定（佰瑞特可购），M3×14 也可替代
+- 左图方案：3 mm 连轴板材 + 8 mm 打印件垫块
+- 右图方案：4 mm 连轴板材 + 7 mm 打印件垫块
+
+### 参考资源
+
+<CardGroup cols={2}>
+  <Card
+    title="OpenTpuOmniWheel GitHub"
+    icon="github"
+    href="https://github.com/Dadingdang/OpenTpuOmniWheel"
+  >
+    查看开源仓库与设计资料
+  </Card>
+  <Card
+    title="淘宝购买链接"
+    icon="shopping-cart"
+    href="https://h5.m.taobao.com/awp/core/detail.htm?ft=t&id=706932589502"
+  >
+    有问题优先到 QQ 群咨询
+  </Card>
+</CardGroup>
+
+- **QQ 交流群**：704988252
+- **百度网盘**：链接 https://pan.baidu.com/s/1Xav2jlvn4blMRgvaJnLR-w?pwd=22bb（提取码：22bb）
+- **参考开源**：[RM2022 南京理工大学 Alliance 步兵机器人机械结构开源](https://github.com/Dadingdang/OpenTpuOmniWheel)
 
 <Card
   title="查看完整设计图纸"

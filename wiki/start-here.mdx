@@ -1,82 +1,129 @@
 ---
 title: "Start Here（新人入口）"
-description: "1. **路过访客（3 分钟）**"
+description: "NEC 新人第一站：根据你的角色，选择最适合的入门路径"
 ---
 
 # Start Here（新人入口）
 
-# 请选择你的角色：
+欢迎来到 **NEC 新能源开发者社区**！本页是新人第一站，根据你的时间和目标，选择最适合的入门路径。
 
-1. **路过访客（3 分钟）**
-	- 我是谁？你们做什么？我能获得什么？
-	- 下一步：加入群 / Star / 看 10 分钟 Quickstart
-1. **新人（1 小时）**
-	- **我如何跑起来？我如何完成第一个 commit/PR？**
-	- **下一步：**[**First Good Issue**](https%3A%2F%2Fgitee.com%2Fdarrenpig%2Fnew_energy_coder_club%2Fissues%2FIC9NDX)**/ 新手任务 / 开发环境**
-1. **贡献者（1-2 周）**
-	- 我如何参与协作？怎么提需求、提 Issue、提 PR？标准是什么？
-	- 下一步：参与一个竞赛/项目小任务，进入稳定贡献
-1. **月付用户（持续）**
-	- 我花钱能买到什么“加速器”？（节省时间、少走弯路、有人带、可复用资源、作品产出/简历产出）
-	- 下一步：订阅 NEC+（你们的付费会员），进入“结构化学习 + 真实交付”
+---
 
-1. 10 分钟：你将完成什么（预期成果截图/视频/GIF）
-1. 10 分钟：环境检查（Windows/Mac/Linux 分流）
-1. 10 分钟：拉取仓库 & 启动一个最小 Demo（能跑就赢）
-1. 10 分钟：修改一处配置/文档（极小任务）
-1. 10 分钟：提交 commit & 发起 PR（配截图）
-1. 10 分钟：加入群 & 领取 First Good Issue
+## 请选择你的角色
 
-并且在页面底部放一个 **“****遇到问题怎么办****”** 区块，链接到：
+<CardGroup cols={2}>
+  <Card title="路过访客（3 分钟）" icon="eye" color="#8B5CF6">
+    快速了解 NEC 是做什么的、能给你提供什么价值。
+  </Card>
+  <Card title="新人（1 小时）" icon="rocket" color="#0EA5E9">
+    跑通一个无硬件 Demo，完成第一次提交/PR。
+  </Card>
+  <Card title="贡献者（1-2 周）" icon="handshake" color="#10B981">
+    参与真实项目/竞赛任务，进入稳定贡献节奏。
+  </Card>
+  <Card title="月付会员（持续）" icon="star" color="#F59E0B">
+    订阅 NEC+，获得结构化学习与真实交付加速。
+  </Card>
+</CardGroup>
 
-- 常见错误排查（FAQ）
-- 提问模板（复制粘贴即可）
-- 交流群规范（不要“我这报错了怎么办”）
+---
 
-**1min 了解**（大方向）和 **3min 快速上手**（MVP 演示）
+## 3 分钟快速了解
 
- 整个文档的大概层级：
+如果你是路过访客，建议先看这几个页面：
 
-📁 \{ NEC 知识库 \}
+<CardGroup cols={2}>
+  <Card
+    title="NEC 是什么"
+    icon="circle-question"
+    href="/wiki/nec-wiki-home"
+  >
+    团队背景、组织架构、核心项目一览。
+  </Card>
+  <Card
+    title="关于社区"
+    icon="users"
+    href="/community/about"
+  >
+    社区愿景、开源理念与加入方式。
+  </Card>
+</CardGroup>
 
-├── 🏠 00. Welcome （从这里开始）
+---
 
-│   ├── 📝 关于 NEC （使命与愿景）
+## 1 小时快速上手
 
-│   ├── ⚡ 快速开始 （1min 路线选择 / 3min Demo）
+如果你是新人，建议按以下顺序完成 **1 小时 onboarding**：
 
-│   └── 🙋 社区准则与加入流程
+<Steps>
+  <Step title="10 分钟：你将完成什么">
+    浏览 [新人 60 分钟上手](/start-here/60min)，了解预期成果：跑通 Demo、提交第一个 PR。
+  </Step>
+  <Step title="10 分钟：环境检查">
+    确认你已安装 Git、Python 3.8+，并拥有 Gitee/GitHub 账号。Windows/Mac/Linux 均可。
+  </Step>
+  <Step title="10 分钟：拉取仓库 & 启动 Demo">
+    按 [60 分钟教程](/start-here/60min) 克隆仓库并运行 `python docs/nec_quickstart/hello_nec.py`。
+  </Step>
+  <Step title="10 分钟：完成一个极小任务">
+    修改 `docs/start-here/newcomers.md`，在"新人墙"追加一行自己的信息。
+  </Step>
+  <Step title="10 分钟：提交 Commit & 发起 PR">
+    使用 Conventional Commits 风格提交，并向主分支发起 PR。
+  </Step>
+  <Step title="10 分钟：加入社群 & 领取任务">
+    加入 QQ 交流群/飞书群，在 Gitee Issues 中筛选 `good first issue`。
+  </Step>
+</Steps>
 
-├── 🗺️ 01. Learn （学习成长路径）
+<Card
+  title="开始 60 分钟上手"
+  icon="play"
+  href="/start-here/60min"
+  horizontal
+>
+  无硬件也能跑，完成你的第一个 NEC PR。
+</Card>
 
-│   ├── 🛠️ 机械工程师路径 （含 Prusa， 3D 打印指南）
+---
 
-│   ├── 🔌 硬件工程师路径 （含 AM32， 电调调试）
+## 常见问题与求助
 
-│   ├── 💻 软件工程师路径 （含 大模型， 算法指南）
+遇到问题时，请先查阅以下资源：
 
-│   └── 📚 技能矩阵与资源库 （按阶段排序）
+<CardGroup cols={3}>
+  <Card
+    title="常见问答 FAQ"
+    icon="message-circle-question"
+    href="/wiki/faq"
+  >
+    高频问题集中解答
+  </Card>
+  <Card
+    title="提问模板"
+    icon="clipboard-list"
+    href="/wiki/faq#如何提问"
+  >
+    复制粘贴即可规范提问
+  </Card>
+  <Card
+    title="交流群规范"
+    icon="shield-check"
+    href="/wiki/community"
+  >
+    避免"我这报错了怎么办"
+  </Card>
+</CardGroup>
 
-├── 🚀 02. Build （项目与竞赛）
+---
 
-│   ├── 🏆 竞赛中心 （ROBOCON / AIC 历届资料）
+## 加入社群
 
-│   ├── 🤖 机器人仓库 （BB8 / EB25 等）
+- **QQ 交流群**：479053780
+- **Gitee 主仓库**：[https://gitee.com/darrenpig/new_energy_coder_club](https://gitee.com/darrenpig/new_energy_coder_club)
+- **GitHub 镜像**：[https://github.com/Darrenpig/new_energy_coder_club](https://github.com/Darrenpig/new_energy_coder_club)
+- **加入收集**：[查看入群与资料收集二维码](/community/join-collection)
 
-│   └── 📋 项目管理规范 （里程碑/交付索引）
+---
 
-├── 🤝 03. Contribute （参与协作）
-
-│   ├── 🛠️ 开发基线 （代码规范/Git 流）
-
-│   ├── ✍️ 文档贡献指南 （如何写 Wiki）
-
-│   └── ✅ 评审与 CI 流水线
-
-└── 🌐 04. Community （社区生态）
-
-    ├── 👥 核心成员介绍 （Maintainers）
-    ├── 📅 会议纪要与周刊 （周会/例会）
-    └── 💬 沟通渠道 （QQ 群/微信/飞书）
-
-下面是 CURC 的参赛规划
+*最后更新：2026-06-23 | 维护者：NEC 文档组*

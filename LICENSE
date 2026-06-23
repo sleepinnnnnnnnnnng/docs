@@ -1,21 +1,47 @@
-MIT License
+木兰宽松许可证，第2版
 
-Copyright (c) 2023 Mintlify
+木兰宽松许可证，第2版
+2020年1月 http://license.coscl.org.cn/MulanPSL2
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+您对“软件”的复制、使用、修改及分发受木兰宽松许可证，第2版（“本许可证”）的如下条款的约束：
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+一、定义
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+1. “软件”是指由“贡献”构成的许可在“本许可证”下的程序和相关文档的集合。
+2. “贡献”是指由任一“贡献者”许可在“本许可证”下的受版权法保护的作品。
+3. “贡献者”是指将受版权法保护的作品许可在“本许可证”下的自然人或“法人实体”。
+4. “法人实体”是指提交贡献的机构及其“关联实体”。
+5. “关联实体”是指，对“本许可证”下的行为方而言，控制、受控制或与其共同受控制的机构，此处的控制是指有受控方或共同受控方至少50%直接或间接的投票权、资金或其他有价证券。
+
+二、授予版权许可
+
+每个贡献者就其所贡献的贡献，授予您对“软件”永久、全球、非排他、免费、不可撤销的版权许可，您可以复制、使用、修改、分发其贡献，不论修改与否。
+
+三、授予专利许可
+
+每个贡献者就其专利权利要求，授予您对“软件”永久、全球、非排他、免费、不可撤销的（根据该贡献者或该贡献者许可的“关联实体”现在或将来所拥有或控制的专利权利要求）专利许可，供您制造、委托制造、使用、许诺销售、销售、进口、分销“软件”或您的修改作品，但前述专利权利要求仅限于该贡献者或该贡献者许可的“关联实体”现在或将来所拥有或控制的权利要求，且该贡献者及其“关联实体”均不会就以下情形对您提出专利侵权索赔：
+（i）您自己制造、委托制造、使用、许诺销售、销售、进口、分销“软件”或您的修改作品；
+（ii）结合您或第三方提供的其他产品或服务使用“软件”或您的修改作品，但该贡献者或该贡献者许可的“关联实体”不会因该等产品或服务而被控专利侵权。
+
+四、商标
+
+“本许可证”不授予您任何贡献者或“关联实体”的商标、服务标识的使用许可。
+
+五、您对“软件”的使用、修改及分发需要遵守中华人民共和国相关法律法规。倘若“软件”或其任何部分使用了由贡献者提供的受中华人民共和国法律法规保护的任何内容，则该贡献者须保证其拥有合法授权，或该等内容属于可合法使用的范围。
+
+六、免责声明
+
+除非适用法律要求或书面同意，任何贡献者均不对因使用“软件”而产生的任何损失承担责任，包括但不限于直接损失、间接损失、特殊损失、意外损失、附带损失、惩罚性损失以及因“软件”使用产生的其他任何形式的损失。
+
+七、语言
+
+“本许可证”以中英文双语表述，中英文版本具有同等法律效力。如果中英文版本存在任何冲突，以中文版为准。
+
+附录：如何应用木兰宽松许可证到您的软件
+
+在软件的根目录下创建或修改名为“LICENSE”的文件，将本许可证文本完整地放入该文件中，并在软件的每个源文件头部加入以下版权声明：
+
+    Copyright (c) [年份] [版权所有者]
+    Licensed under the Mulan PSL v2.
+    You may obtain a copy of Mulan PSL v2 at:
+        http://license.coscl.org.cn/MulanPSL2

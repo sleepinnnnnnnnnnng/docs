@@ -15,6 +15,12 @@
 - OSHW HUB: https://oshwhub.com/explore
 - 远景资源网: https://yuanjingziyuan.com/
 
+## 开源代码与框架参考
+
+- 湖南大学跃鹿战队 — RoboMaster 电控通用嵌入式框架: https://gitee.com/hnuyuelurm/basic_framework
+- TarsGo 嵌入式团队 — UIML 统一接口中间件: https://gitee.com/tarsgo-embedded/UIML
+- XRobot 机器人开发框架（dev 分支）: https://gitee.com/x-robot/XRobot/tree/dev/
+
 ## 教程与学习资料
 
 - NEC 学习教程: docs/learn/

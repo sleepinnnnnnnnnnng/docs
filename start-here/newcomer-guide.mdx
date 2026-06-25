@@ -1,0 +1,78 @@
+---
+title: "新人入门指南"
+description: "常州工 NEC 战队新人入门指南：团队定位、三域技能基线与学习路径"
+---
+
+# 新人入门指南
+
+> **开始之前**：本仓库的 License 文件记录了我们的开源故事，而真正的技术成长始于**快速试错与高度专注的实践**。
+
+## 本仓库定位
+
+这是一个**主仓（Master Repository）**，汇集了常州工 NEC 战队近三年竞赛的核心资料与技术沉淀。不同于普通代码托管，这里采用**项目流程管理基线**策略（类似 GitHub Projects 的进度可视化逻辑），帮助你：
+
+- **纵向**：通过真实竞赛项目掌握硬件/软件/运营全链路
+- **横向**：参考已有项目（按中文拼音排序的文件夹）或历史比赛方案
+- **深度**：在 `good first issue` 中完成从环境配置到文档排错的系统性训练
+
+**关于 Fork 与分仓策略**：为避免主仓体积膨胀，大型项目会拆分为独立子仓库，但技术路线与学习记录始终保持在这里。
+
+---
+
+## 团队技能基线与学习路径
+
+我们采用**三域分割模型**（硬技能 + 软技能 + 综合管理）：
+
+> 学习完成将会有全栈项目能力
+
+### 00 机械工程（Mechanical）
+
+> 机器人系统的物理载体
+
+覆盖**三维建模（SW）、成型工艺、3D 打印、CNC 数控加工**。优秀的机械工程师需要**向上兼容**（理解硬件电路布局）与**向下优化**（配合软件算法调整结构）。如果你专注软/运维方向，可跳过此节深度实践，但建议了解基础公差配合与材料选型。
+
+### 01 嵌入式硬件（Embedded Hardware）
+
+电子系统的物理实现层，分三个阶段递进：
+
+| 阶段 | 技能点 | 推荐资源 | 预算参考 |
+|------|--------|----------|----------|
+| **001 单片机基础** | 蓝桥杯电子类（单片机/嵌入式赛道） | [蚂蚁工厂科技](https://space.bilibili.com/41862605?spm_id_from=333.337.0.0)（B站/TB 课程+硬件套装约 ¥600）<br/>或低成本替代：[野火电子](https://www.firebbs.cn/)、[江科大自化协](https://space.bilibili.com/38351896) | ¥300-600 |
+| **002 EDA 设计** | PCB 原理图与 Layout | [JHP 硬件工作室](https://space.bilibili.com/497070717?spm_id_from=333.337.search-card.all.click)（学长经验，零基础友好，免费+实战制板） | ¥50-100/板 |
+| **003 硬件体系** | 电子工程系统思维 | [香港大学 M2Stud 内训资料](https://docs.m2stud.io/ee/Necessary-Information-for-Electronics-Trainees/)（已开源）<br/>备用镜像：[Darrenpig's Fork](https://github.com/Darrenpig/m2cs_ros_tutorial) | 免费 |
+
+### 02 嵌入式软件与系统（Embedded Software）
+
+从裸机到操作系统的进阶路径：
+
+- **004 Linux 系统**：跨出嵌入式单片机领域，进入系统级开发。推荐参与开源社区实践：[openEuler](https://openeuler.org/)、[RT-Thread](https://www.rt-thread.io/)。
+  - *关键区分*：Embedded（狭义嵌入式）→ ROS（机器人中间件）→ RTOS（实时操作系统）
+
+- **005 C 语言基础**（⚠️ **核心前置技能**）
+  - 语法入门：[CSDN C技能树](https://edu.csdn.net/skill/c)、[微软官方文档](https://learn.microsoft.com/zh-cn/cpp/c-language/?view=msvc-170)、[菜鸟教程](https://www.runoob.com/cprogramming/c-tutorial.html)
+  - 嵌入式 C 进阶：理解指针、内存管理、寄存器操作
+
+- **006 ROS 机器人操作系统**：[鱼香 ROS 社区](https://fishros.com/)（中文生态最活跃）
+
+### 03 运营与项目管理（Operations）
+
+软技能与工程管理的交叉领域：
+
+- **视觉传达**：高阶 PPT 制作与学术汇报（推荐 [旁门左道 PPT](https://www.pangmenzd.vip/)，队内共享账号）
+- **工具链**：专业软件安装资源 ([软件管家](http://softgj.com/))
+
+---
+
+## 下一步行动
+
+1. **选择主航道**：根据上述 00-03 分类，在 Issues 中筛选对应标签 (`area/mechanical`, `area/hardware`, `area/software`, `area/operations`)
+2. **完成基础训练**：先完成对应方向的前置技能自检，参考 [60 分钟加入 NEC](/start-here/60min) 跑通环境与首个 PR
+3. **认领首个 Issue**：从 `good first issue` 标签中选取带 **"新手友好"** 标记的任务
+
+![合作交流](https://foruda.gitee.com/images/1766547605676368148/29b9de4e_13331507.png "CURC 合作交流")
+
+---
+
+## 来源
+
+本指南整理自 Gitee Issue：[#IBMUQ1](https://gitee.com/darrenpig/new_energy_coder_club/issues/IBMUQ1)

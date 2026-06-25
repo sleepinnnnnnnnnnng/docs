@@ -57,6 +57,7 @@
             "group": "新手上路",
             "pages": [
               "start-here/curc2027-onboarding",
+              "start-here/newcomer-guide",
               "start-here/60min",
               "start-here/newcomers",
               "start-here/first-good-issue",
@@ -89,6 +90,8 @@
               "vision/introduction",
               "vision/detection",
               "vision/localization",
+              "vision/odin1-update",
+              "vision/ms200-lidar",
               "embedded-software/introduction",
               "embedded-software/control",
               "embedded-software/development-setup",
@@ -103,6 +106,7 @@
               "ai-tools/cursor",
               "ai-tools/windsurf",
               "ai-tools/mcp-server",
+              "ai-tools/openclaw-setup",
               "ai-tools/ai-feasibility-study"
             ]
           },
@@ -290,6 +294,7 @@
     "socials": {
       "github": "https://github.com/Darrenpig",
       "linkedin": "https://www.linkedin.com/company/new-energy-coder"
-    }
+    },
+    "bottom": "<a href=\"https://beian.miit.gov.cn/\" target=\"_blank\">苏ICP备2025187096号-1X</a>"
   }
 }

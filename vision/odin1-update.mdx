@@ -1,0 +1,67 @@
+---
+title: "Odin1 更新日志"
+description: "Odin1 ROS Driver 0.9.0 与固件 0.10.0 更新内容汇总"
+---
+
+# Odin1 更新日志
+
+本文档汇总 Odin1 视觉模块的 ROS Driver 与固件更新要点，方便视觉组快速定位新功能与修复项。
+
+## Odin1 ROS Driver 0.9.0
+
+源码仓库：[GitHub - manifoldsdk/odin_ros_driver](https://github.com/manifoldsdk/odin_ros_driver)
+
+### 修复
+
+- **修复获取地图失败导致其他命令锁定的问题**
+  - 旧版本在获取地图失败时，后续命令会进入阻塞/锁定状态；0.9.0 修复了该状态机异常，提升节点稳定性。
+
+### 新增功能
+
+- **YAML 配置帧率**
+  - 支持在 YAML 文件中设置传感器输出帧率：
+    - `100` → 10 FPS
+    - `145` → 14.5 FPS
+
+- **NTP-like 时间同步**
+  - 新增模拟 NTP 方式的时间同步功能，降低 ROS 消息时间戳与主机时钟的偏差。
+
+- **IMU 数据保存**
+  - 开启 `recorddata` 后可保存 IMU 数据，支持导入 CloudMind 进行后处理分析。
+
+- **cloud_slam 投影到原始图片 Demo**
+  - 新增示例脚本，将 `cloud_slam` 结果投影回原始图像，便于可视化验证。
+
+---
+
+## Odin1 固件 0.10.0
+
+固件下载：[飞书文件夹](https://vvcazjv268.feishu.cn/drive/folder/OCJVf66P2l7kp5dhnzvc2IGOnuc?from=from_copylink)
+
+### 新增与优化
+
+- **摄像头 / 激光雷达帧率切换**
+  - 支持在 10 Hz 与 14.5 Hz 之间切换帧率，匹配不同场景下的算力与精度需求。
+
+- **里程计协方差输出**
+  - 固件直接输出里程计协方差矩阵，方便 EKF / UKF 等融合算法直接使用。
+
+- **高冲击场景优化**
+  - 针对剧烈运动、碰撞等场景优化 IMU 与视觉融合策略，降低位姿跳变。
+
+- **回环检测与重定位优化**
+  - 优化回环检测特征匹配策略，降低误匹配率；重定位成功率提升。
+
+---
+
+## 升级建议
+
+1. 先升级固件到 0.10.0，确认摄像头/雷达帧率设置符合当前场景需求。
+2. 再升级 ROS Driver 到 0.9.0，同步更新 launch/yaml 中的帧率参数。
+3. 如需使用 CloudMind 后处理，确认 `recorddata` 已开启并检查 IMU 数据保存路径。
+
+## 相关链接
+
+- [Odin1 ROS Driver GitHub](https://github.com/manifoldsdk/odin_ros_driver)
+- [Odin1 固件 0.10.0 下载](https://vvcazjv268.feishu.cn/drive/folder/OCJVf66P2l7kp5dhnzvc2IGOnuc?from=from_copylink)
+- [视觉 SIG 主页](/curc26/vision-sig/about)

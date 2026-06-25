@@ -1,34 +1,43 @@
-> **Customize this file**: Tailor this template to your project by noting specific contribution types you're looking for, adding a Code of Conduct, or adjusting the writing guidelines to match your style.
+---
+title: "贡献文档"
+description: "如何为 NEC 文档站点贡献力量"
+---
 
-# Contribute to the documentation
+# 贡献文档
 
-Thank you for your interest in contributing to our documentation! This guide will help you get started.
+感谢你对 NEC 文档站点的关注！本指南帮助你快速开始贡献。
 
-## How to contribute
+## 如何贡献
 
-### Option 1: Edit directly on GitHub
+### 方式一：直接在 GitHub/Gitee 上编辑
 
-1. Navigate to the page you want to edit
-2. Click the "Edit this file" button (the pencil icon)
-3. Make your changes and submit a pull request
+1. 导航到你想要编辑的页面
+2. 点击 "Edit this file" 按钮（铅笔图标）
+3. 修改内容并提交 Pull Request
 
-### Option 2: Local development
+### 方式二：本地开发
 
-1. Fork and clone this repository
-2. Install the Mintlify CLI: `npm i -g mint`
-3. Create a branch for your changes
-4. Make changes
-5. Navigate to the docs directory and run `mint dev`
-6. Preview your changes at `http://localhost:3000`
-7. Commit your changes and submit a pull request
+1. Fork 并克隆本仓库
+2. 安装 Mintlify CLI：
+   ```bash
+   npm i -g mint
+   ```
+3. 创建功能分支
+4. 进行修改
+5. 在 docs 目录下运行：
+   ```bash
+   mint dev
+   ```
+6. 在 `http://localhost:3000` 预览更改
+7. 提交更改并发起 Pull Request
 
-For more details on local development, see our [development guide](development.mdx).
+更多本地开发细节，请参考 [开发指南](development.mdx)。
 
-## Writing guidelines
+## 写作规范
 
-- **Use active voice**: "Run the command" not "The command should be run"
-- **Address the reader directly**: Use "you" instead of "the user"
-- **Keep sentences concise**: Aim for one idea per sentence
-- **Lead with the goal**: Start instructions with what the user wants to accomplish
-- **Use consistent terminology**: Don't alternate between synonyms for the same concept
-- **Include examples**: Show, don't just tell
+- **使用主动语态**："运行命令" 而不是 "命令应该被运行"
+- **直接面向读者**：使用 "你" 而不是 "用户"
+- **保持简洁**：一个句子只表达一个意思
+- **先讲目标**： instructions 从用户想要完成的事情开始
+- **术语一致**：同一概念不要交替使用不同同义词
+- **包含示例**：展示，而不仅仅是讲述

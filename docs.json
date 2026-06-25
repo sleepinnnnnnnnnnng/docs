@@ -29,8 +29,7 @@
             "group": "快速开始",
             "pages": [
               "quickstart",
-              "development",
-              "nec_quickstart/about"
+              "development"
             ]
           },
           {
@@ -83,7 +82,6 @@
               "wiki/nec-wiki-home",
               "wiki/start-here",
               "wiki/learning-path",
-              "wiki/projects-and-competitions",
               "wiki/faq",
               "wiki/gitee-contribution",
               "wiki/community",
@@ -92,6 +90,14 @@
               "wiki/hku-software-trainee",
               "wiki/experience-index",
               "wiki/nec-plus-membership"
+            ]
+          },
+          {
+            "group": "AI 工具",
+            "pages": [
+              "ai-tools/claude-code",
+              "ai-tools/cursor",
+              "ai-tools/windsurf"
             ]
           }
         ]
@@ -117,10 +123,6 @@
               "curc26/vision-sig/about",
               "curc26/operation-sig/about"
             ]
-          },
-          {
-            "group": "NEC+",
-            "pages": ["nec-plus/landing"]
           }
         ]
       },
@@ -132,6 +134,7 @@
             "pages": [
               "community/about",
               "community/join-collection",
+              "community/nec-plus",
               "community/skill-branch",
               "community/mentors",
               "community/a416-lab",

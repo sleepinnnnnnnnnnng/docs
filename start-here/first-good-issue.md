@@ -56,7 +56,7 @@
 
 ### 代码类（type:feature/type:bug）
 - ✅ 有最小复现/最小验证
-- ✅ 不破坏现有 Demo（至少跑通 `docs/nec_quickstart`）
+- ✅ 不破坏现有文档与导航链接
 - ✅ PR 描述里写清楚“怎么验证”
 
 ---
@@ -83,14 +83,13 @@
    - 验收：写清楚“需要什么硬件/软件/预估时间/常见坑”
 
 ### B. 仓库维护类（适合愿意学 Git 的新人）
-5. **repo：为 docs/nec_quickstart 增加一个 `--help` 示例截图**
-   - 标签：`good first issue` `type:docs` `difficulty:1` `area:repo`
+5. **repo：补一个 PR 模板里的检查项（比如文档链接 404 检查）**
 
-6. **repo：补一个 PR 模板里的检查项（比如运行 demo 的 checkbox）**
+6. **repo：为 README 增加本地预览截图**
    - 标签：`good first issue` `type:ops` `difficulty:1` `area:repo`
 
 ### C. 轻量代码类（新人可尝试）
-7. **demo：给 hello_nec.py 增加 `--plot ascii`/`--plot off` 开关**
+7. **demo：给仓库示例脚本增加 `--plot ascii`/`--plot off` 开关**
    - 标签：`good first issue` `type:feature` `difficulty:2` `area:repo`
    - 验收：默认行为不变；新增参数可用
 

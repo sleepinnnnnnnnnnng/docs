@@ -7,9 +7,13 @@ description: "跑通 NEC 最小 Demo + 提交第一个 PR"
 
 <Info>
   **1 小时内完成三件事：**
-  1. 在本地跑通一个"无硬件也能跑"的 NEC 最小 Demo
+  1. 浏览 NEC 入门资料，了解最小可运行 Demo 的入口
   2. 提交一个很小但规范的 PR（文档也算贡献）
   3. 学会如何领取 [good first issue](https://gitee.com/darrenpig/new_energy_coder_club/issues?state=all&labels=good+first+issue)，开始参与真实项目/竞赛任务
+
+  <Warning>
+    原 `docs/nec_quickstart/` 已移除，最小 Demo 入口正在整理中。最新 runnable 示例请先看 [入门飞书文档](https://scn0bdoc8zxg.feishu.cn/wiki/QAtNwr244ir8ZekITEZcwpOZnkg)。
+  </Warning>
 </Info>
 
 <Card
@@ -24,11 +28,11 @@ description: "跑通 NEC 最小 Demo + 提交第一个 PR"
 ## 你将获得什么
 
 <CardGroup cols={2}>
-  <Card title="能跑起来" icon="play">
-    执行 `python docs/nec_quickstart/hello_nec.py`
+  <Card title="能了解" icon="play">
+    查看最新入门资料与 Demo 入口
   </Card>
   <Card title="会产出" icon="file-spreadsheet">
-    生成 `docs/nec_quickstart/out/run_log.csv`（仿真轨迹日志）
+    完成一次最小可验证的贡献记录
   </Card>
   <Card title="能贡献" icon="git-pull-request">
     完成一次标准 Git 提交 & PR
@@ -67,21 +71,10 @@ description: "跑通 NEC 最小 Demo + 提交第一个 PR"
     ```
   </Step>
 
-  <Step title="10-25 分钟：跑通最小 Demo（无硬件）">
-    直接运行：
+  <Step title="10-25 分钟：了解最小 Demo（无硬件）">
+    由于 `docs/nec_quickstart/` 已移除，请先看 [入门飞书文档](https://scn0bdoc8zxg.feishu.cn/wiki/QAtNwr244ir8ZekITEZcwpOZnkg) 获取当前可运行的最小示例。
 
-    ```bash
-    python docs/nec_quickstart/hello_nec.py --seconds 20
-    ```
-
-    你应该看到：
-
-    - 控制台输出：运行摘要 + 一个 ASCII 轨迹图
-    - 生成文件：`docs/nec_quickstart/out/run_log.csv`
-
-    <Warning>
-      如果你没看到 `out/run_log.csv`，先看本文末尾《常见问题》。
-    </Warning>
+    如果你已经能跑通飞书文档中的 Demo，可以直接进入下一步：创建分支并做一个小贡献。
   </Step>
 
   <Step title="25-35 分钟：创建分支">
@@ -136,7 +129,7 @@ description: "跑通 NEC 最小 Demo + 提交第一个 PR"
 
     PR 描述里写清楚：
 
-    - 我跑通了 `docs/nec_quickstart/hello_nec.py`
+    - 我已查看并尝试当前入门 Demo
     - 我新增了新人墙记录
     - 我想继续认领一个 `good first issue`
   </Step>
@@ -178,18 +171,16 @@ description: "跑通 NEC 最小 Demo + 提交第一个 PR"
     - macOS：可以用 `python3` 代替 `python`
 
     ```bash
-    python3 docs/nec_quickstart/hello_nec.py --seconds 20
+    python3 -c "print('hello NEC')"
     ```
+
+    确认 Python 环境正常后，再按 [入门飞书文档](https://scn0bdoc8zxg.feishu.cn/wiki/QAtNwr244ir8ZekITEZcwpOZnkg) 运行当前 Demo。
   </Accordion>
 
-  <Accordion title="运行了但没有生成 out/run_log.csv">
-    - 确认你在仓库根目录
-    - 确认路径存在：`docs/nec_quickstart/`
-    - 再运行一次：
-
-    ```bash
-    python docs/nec_quickstart/hello_nec.py --seconds 5 --out docs/nec_quickstart/out
-    ```
+  <Accordion title="找不到最小 Demo 入口">
+    - `docs/nec_quickstart/` 已移除
+    - 最新 runnable 示例请查看 [入门飞书文档](https://scn0bdoc8zxg.feishu.cn/wiki/QAtNwr244ir8ZekITEZcwpOZnkg)
+    - 如果飞书文档链接失效，请在社区群或 Gitee Issues 中反馈
   </Accordion>
 
   <Accordion title="我不知道下一步做什么">

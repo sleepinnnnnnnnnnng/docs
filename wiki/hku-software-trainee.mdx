@@ -1,60 +1,251 @@
 ---
-title: "HKU Robocon 软件组新人须知"
-description: "HKU Robocon Team 软件组培训索引：编程工具、Linux、Git、ROS 训练教程"
+title: "HKU Robocon 软件组新人培训指南"
+description: "HKU Robocon Team 软件组新人学习路径：C/C++、Linux、Git、ROS 2 与机器人开发入门"
 ---
 
-# HKU Robocon 软件组新人须知
+# HKU Robocon 软件组新人培训指南
 
-> 来源：[HKU Robocon Team — docs.m2stud.io](https://docs.m2stud.io/cs/Necessary-Information-for-Software-Trainees/)  
-> 本文档为 HKU Robocon Team 软件组新人培训索引页的中文整理，保留原文链接，供 NEC 成员参考学习。
+> 本页面整理自 [HKU Robocon Team — Necessary Information for Software Trainees](https://docs.m2stud.io/cs/Necessary-Information-for-Software-Trainees/)，供 NEC 软件组/电控组新人参考。完整实验细节请访问原站点。
 
-本页是软件组新人进入下一阶段前需要阅读和理解的基础信息索引。更具体的主题可点击下方的训练教程链接，跳转到原站点查看完整内容。
-
----
-
-## 1. 编程工具
-
-- **C / C++**：队伍主要使用的编程语言。
-- **Linux**：机器人运行的操作系统，建议先掌握常用命令。
-- **Git**：日常版本控制工具，程序员协作必备。
-- **ROS（Robot Operating System）**：用于构建机器人应用的软件库与工具集。
+如果你是第一次接触机器人软件开发，建议按照下面的路径逐步学习。核心目标是：能够在 Linux 环境下使用 Git 协作，理解 ROS 2 节点、话题、服务，最终写出可以控制真实机器人的代码。
 
 ---
 
-## 2. 训练教程
+## 学习目标
 
-原站点提供了一系列关于 Linux、Git 和 ROS 的培训教程，帮助新人掌握 Robocon 队伍中所需的编程技能。
+完成本指南后，你应该能够：
 
-### Linux 基础
-
-- [SSH 远程连接](https://docs.m2stud.io/cs/linux/ssh/) — 学习 `ssh`、`tmux`、`sftp` 等远程开发与文件传输工具。
-
-### Arduino / 嵌入式
-
-- [Lab 1.3 — 增量式编码器与库](https://docs.m2stud.io/cs/arduino/abi/)
-- [Lab 1.4 — 无刷电机与 CAN 通信](https://docs.m2stud.io/cs/arduino/can/)
-- [补充：I2C 通信与传感器](https://docs.m2stud.io/cs/arduino/i2c/)
-- [Lab 7.1 — Arduino digitalWrite / analogWrite](https://docs.m2stud.io/cs/arduino/07-L1-Arduino-digitalWrite-analogWrite/)
-
-### ROS 2 实践
-
-- [Assignment 1 — 使用 m2_joy 的手柄控制器](https://docs.m2stud.io/cs/ros/turtle_ps4/) — 在 turtlesim 中用 PS4 手柄控制小乌龟。
-- [Assignment 2 — 自动路径跟随](https://docs.m2stud.io/cs/ros/turtle_path/) — 控制模拟机器人沿预定义路径移动。
-- [Lab 6.3 — 使用 RViz 进行可视化](https://docs.m2stud.io/cs/ros_additional/06-L3-rviz/)
+- 使用 Linux 常用命令操作机器人上位机；
+- 通过 SSH 远程登录机器人，使用 `tmux` 管理会话；
+- 使用 Git 与队友协作开发；
+- 理解 ROS 2 的核心概念（Node、Topic、Service、Launch）；
+- 在 turtlesim 中完成手柄控制、路径跟随等基础作业；
+- 将所学迁移到 NEC 的真实机器人项目中。
 
 ---
 
-## 3. 学习建议
+## 第一步：必备工具
 
-1. 先熟悉 **Linux 常用命令** 和 **Git 工作流**。
-2. 完成 ROS 2 基础实验（topics、services、package、msg/srv）。
-3. 逐步完成 turtlesim 系列作业，理解节点、话题、服务、launch 文件的使用。
-4. 结合 NEC 实际项目代码，尝试在机器人上复现类似功能。
+<CardGroup cols={2}>
+  <Card title="C / C++" icon="code">
+    机器人底层控制、ROS 2 节点开发的主要语言。建议先掌握基础语法、指针、面向对象和 STL 常用容器。
+  </Card>
+  <Card title="Linux" icon="terminal">
+    机器人运行的操作系统。需要熟悉文件系统、权限管理、进程控制和常用命令行工具。
+  </Card>
+  <Card title="Git" icon="git-pull-request">
+    团队协作的版本控制工具。必须掌握克隆、提交、分支、合并、解决冲突和 Pull Request 流程。
+  </Card>
+  <Card title="ROS 2" icon="robot">
+    Robot Operating System，机器人应用开发框架。核心包括节点通信、消息类型、launch 文件和工具链。
+  </Card>
+</CardGroup>
 
 ---
 
-## 4. 相关资源
+## 第二步：Linux 与远程开发
 
-- [HKU Robocon 软件组首页](https://docs.m2stud.io/cs/Necessary-Information-for-Software-Trainees/)
-- [NEC 新人 60 分钟上手](/start-here/60min)
-- [NEC 培训资源中心](/wiki/training-resources)
+### 常用命令速查
+
+| 命令 | 作用 |
+|------|------|
+| `ls` / `cd` / `pwd` | 文件与目录操作 |
+| `chmod` / `chown` | 修改文件权限与所有者 |
+| `ps` / `top` / `htop` | 查看进程 |
+| `ifconfig` / `ip a` | 查看网络配置 |
+| `ssh user@host` | 远程登录 |
+| `scp` / `sftp` | 远程文件传输 |
+| `tmux` | 终端会话管理 |
+
+### SSH 与 tmux 要点
+
+- **SSH 密钥**：使用 `ssh-keygen` 生成密钥对，公钥（`id_rsa.pub`）放到机器人 `~/.ssh/authorized_keys` 中，避免每次输入密码。
+- **远程机器人无显示器**：比赛中机器人通常没有外接屏幕，所有操作都通过 SSH 完成。
+- **tmux 作用**：
+  - 一个 SSH 窗口中同时运行多个终端；
+  - 断网后程序继续在后台运行；
+  - 多人共享同一会话调试。
+- 常用快捷键：
+  - `Ctrl+B` 然后 `"`：上下分屏
+  - `Ctrl+B` 然后 `%`：左右分屏
+  - `Ctrl+B` 然后 `d`：分离会话
+  - `tmux a`：重新附加会话
+
+> 详细内容：[HKU SSH 教程](https://docs.m2stud.io/cs/linux/ssh/)
+
+---
+
+## 第三步：Git 协作
+
+Git 是团队开发的基础。建议遵循以下流程：
+
+<Steps>
+  <Step title="克隆仓库">
+    将 NEC 主仓库克隆到本地：
+    ```bash
+    git clone https://gitee.com/darrenpig/new_energy_coder_club.git
+    ```
+  </Step>
+  <Step title="创建功能分支">
+    不要在 `main` 或 `master` 上直接修改：
+    ```bash
+    git checkout -b feature/your-name-description
+    ```
+  </Step>
+  <Step title="提交并推送">
+    ```bash
+    git add .
+    git commit -m "feat(module): description"
+    git push origin feature/your-name-description
+    ```
+  </Step>
+  <Step title="发起合并请求">
+    在 Gitee/GitHub 上创建 Pull Request，邀请队友 review 后再合并。
+  </Step>
+</Steps>
+
+---
+
+## 第四步：ROS 2 核心概念
+
+### Node（节点）
+
+节点是 ROS 2 中最小的执行单元，一个节点通常负责一项具体任务，例如：
+
+- 读取手柄输入
+- 发布电机速度指令
+- 处理视觉识别结果
+
+### Topic（话题）
+
+节点之间通过话题发布/订阅消息。例如：
+
+- 手柄节点发布 `/input/joy_data`
+- 控制节点订阅该话题，转换为 `/cmd_vel` 速度指令
+- 底盘节点订阅 `/cmd_vel`，驱动电机
+
+### Service（服务）
+
+服务用于请求-响应式通信，适合一次性调用，例如：
+
+- 清除 turtlesim 轨迹
+- 修改画笔颜色
+- 重置机器人状态
+
+### Launch 文件
+
+`ros2 launch` 可以一次性启动多个节点，省去手动开多个终端的麻烦。
+
+---
+
+## 第五步：动手实验
+
+### 实验 1：turtlesim + PS4 手柄
+
+**目标**：用 PS4 手柄控制 turtlesim 中的小乌龟。
+
+**关键练习点**：
+
+- 订阅 `/input/joy_data` 话题，解析手柄输入；
+- 发布 `geometry_msgs/msg/Twist` 到 `/turtle1/cmd_vel`；
+- 实现变速、清屏、改颜色等功能；
+- 理解 launch 文件如何组织多个节点。
+
+> 原题：[Assignment 1 — Manual Controller with m2_joy](https://docs.m2stud.io/cs/ros/turtle_ps4/)
+
+### 实验 2：自动路径跟随
+
+**目标**：让 turtlesim 沿预定义路径移动。
+
+**关键练习点**：
+
+- 自定义 service 定义路径点；
+- 编写路径管理节点；
+- 修改 `CMakeLists.txt`、`package.xml`；
+- 通过 `ros2 service call` 测试功能。
+
+> 原题：[Assignment 2 — Automatic Path](https://docs.m2stud.io/cs/ros/turtle_path/)
+
+### 实验 3：RViz 可视化
+
+**目标**：学会使用 RViz 调试机器人软件。
+
+**关键练习点**：
+
+- 添加 TF、LaserScan、Marker 等显示插件；
+- 理解坐标系和传感器数据的可视化；
+- 将可视化用于后续真实机器人调试。
+
+> 原教程：[Lab 6.3 — Visualizations in ROS with RViz](https://docs.m2stud.io/cs/ros_additional/06-L3-rviz/)
+
+---
+
+## 第六步：嵌入式与通信基础
+
+### Arduino 入门
+
+- `digitalWrite()` / `analogWrite()` 控制 GPIO；
+- 串口打印调试信息；
+- 配合传感器读取模拟量与数字量。
+
+### 编码器
+
+增量式编码器用于测量电机转速和位置，关键参数是分辨率（每转脉冲数 PPR）。
+
+### 无刷电机与 CAN 通信
+
+- 无刷电机（BLDC）通常配合电子调速器（ESC）使用；
+- ESC 通过 CAN 总线接收目标速度/位置/电流指令；
+- 作为程序员，重点是掌握 CAN 帧的封装与解析，以及与 ESC 的通信协议。
+
+### I2C 与传感器
+
+I2C 是连接多种传感器（IMU、距离传感器、OLED 等）的常用总线，需理解主从设备、地址、读写时序。
+
+---
+
+## 推荐学习顺序
+
+<Steps>
+  <Step title="Linux 基础" icon="terminal">
+    常用命令 + SSH + tmux
+  </Step>
+  <Step title="Git 工作流" icon="git-pull-request">
+    分支、提交、PR、解决冲突
+  </Step>
+  <Step title="C/C++ 复习" icon="code">
+    基础语法、指针、面向对象
+  </Step>
+  <Step title="ROS 2 基础" icon="robot">
+    节点、话题、服务、launch
+  </Step>
+  <Step title=" turtlesim 作业" icon="gamepad">
+    手柄控制 + 路径跟随
+  </Step>
+  <Step title="真实机器人迁移" icon="rocket">
+    在 NEC 项目代码中实践
+  </Step>
+</Steps>
+
+---
+
+## 资源汇总
+
+<CardGroup cols={2}>
+  <Card title="HKU 原站点" icon="globe" href="https://docs.m2stud.io/cs/Necessary-Information-for-Software-Trainees/">
+    Necessary Information for Software Trainees 原始页面
+  </Card>
+  <Card title="NEC 60 分钟上手" icon="play" href="/start-here/60min">
+    无需硬件，本地跑通第一个 Demo
+  </Card>
+  <Card title="NEC 培训资源中心" icon="book-open" href="/wiki/training-resources">
+    会议记录、培训视频与资料库
+  </Card>
+  <Card title="NEC Gitee 仓库" icon="code" href="https://gitee.com/darrenpig/new_energy_coder_club">
+    查看项目代码与赛季仓库
+  </Card>
+</CardGroup>
+
+---
+
+*最后整理：基于 HKU Robocon Team 培训材料翻译与重组，仅供 NEC 内部学习参考。*

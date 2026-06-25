@@ -113,7 +113,8 @@
               "ai-tools/claude-code",
               "ai-tools/cursor",
               "ai-tools/windsurf",
-              "ai-tools/mcp-server"
+              "ai-tools/mcp-server",
+              "ai-tools/ai-feasibility-study"
             ]
           }
         ]

@@ -73,6 +73,14 @@
             ]
           },
           {
+            "group": "模板与规范",
+            "pages": [
+              "templates/project-template",
+              "templates/competition-template",
+              "templates/weekly-report-template"
+            ]
+          },
+          {
             "group": "Wiki 知识库",
             "pages": [
               "wiki/nec-wiki-home",
@@ -147,8 +155,7 @@
               "SUPPORT",
               "SECURITY",
               "community/maintainers",
-              "community/team",
-              "community/weekly"
+              "community/team"
             ]
           },
           {

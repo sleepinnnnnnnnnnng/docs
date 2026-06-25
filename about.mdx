@@ -1,126 +1,142 @@
 ---
-title: "NEC 社区文档站点"
-description: "NEC 文档站点说明、目录结构与本地开发指南"
+title: "关于 NEC"
+description: "了解 NEC 新能源开发者社区的起源、愿景、核心价值观与开源生态"
 ---
 
-# NEC 社区文档站点
+# 关于 NEC 新能源开发者社区
 
-本目录包含 NEC (New Energy Coder) 新能源开发者社区的 [Mintlify](https://mintlify.com) 文档站点源码。
+NEC（New Energy Coder）新能源开发者社区是一支立足常州工学院、面向全国的学生与青年工程师开源技术社区。我们围绕 **ROBOCON 全国大学生机器人大赛**、RoboMaster、智能车竞赛、节能减排等赛事，沉淀机械设计、嵌入式开发、机器视觉、运动控制、软件工程等领域的实战经验与开源代码。
 
-在线地址：**https://docs.newenergycoder.club/**
+## 社区愿景
 
-## 📁 目录结构
+<CardGroup cols={2}>
+  <Card title="知识共享" icon="share-nodes" color="#0EA5E9">
+    打破信息壁垒，让优质的技术知识自由流动
+  </Card>
+  <Card title="实践导向" icon="hammer" color="#10B981">
+    从理论到实践，在真实项目中成长
+  </Card>
+  <Card title="协作共赢" icon="handshake" color="#8B5CF6">
+    连接志同道合的伙伴，共同创造价值
+  </Card>
+  <Card title="持续创新" icon="lightbulb" color="#F59E0B">
+    不断探索新技术，推动行业进步
+  </Card>
+</CardGroup>
+
+## 核心价值
+
+### 开源生态
+
+我们坚信开源是推动技术进步的重要力量。NEC 主仓库采用 [木兰宽松许可证第 2 版（Mulan PSL v2）](https://gitee.com/darrenpig/new_energy_coder_club/blob/master/LICENSE.md) 开源，任何人都可以自由使用、修改和贡献；各子项目如有特殊协议，以其仓库内 LICENSE 文件为准。
+
+### 新手友好
+
+我们深知入门的不易。NEC 提供从入门到精通的渐进式学习路径、完善的文档和活跃的社区支持，帮助新手快速成长。
+
+### 工程实践
+
+理论需要实践检验。我们鼓励成员参与真实项目，在解决实际问题中积累经验，培养工程思维。
+
+## 组织架构
 
 ```
-docs/
-├── docs.json              # Mintlify 站点配置与导航
-├── index.mdx              # 站点首页
-├── favicon.svg            # 站点图标
-├── logo/                  # 亮/暗主题 Logo
-├── images/                # 图片资源
-│
-├── wiki/                  # 飞书 Wiki 导出文档
-├── start-here/            # 新手上路
-├── competitions/          # 竞赛文档
-├── competition/           # 竞赛概览与经验（Mintlify 页面）
-├── curc26/                # CURC 2026 赛季
-├── projects/              # 开源项目文档（待补充）
-├── community/             # 社区与贡献
-├── learn/                 # 学习资源
-├── contribute/            # 贡献标签与说明
-├── modules/               # 项目模块技术文档
-├── mechanical/            # 机构设计
-├── vision/                # 视觉识别
-├── embedded-software/     # 嵌软开发
-├── contributing/          # 贡献指南
-├── templates/             # README 模板
-└── tools/                 # 文档工具（如 feishu-import）
+NEC 新能源开发者社区
+├── 核心维护团队
+│   ├── 项目管理
+│   ├── 技术审核
+│   └── 社区运营
+├── 技术委员会
+│   ├── 机器人控制组
+│   ├── 嵌入式开发组
+│   ├── 算法研究组
+│   └── 硬件设计组
+├── 贡献者
+│   ├── 代码贡献者
+│   ├── 文档贡献者
+│   └── 测试贡献者
+└── 社区成员
 ```
 
-## 🚀 本地预览
+## 主要活动
 
-### 安装 Mintlify CLI
+### 竞赛参与
 
-```bash
-npm install -g mintlify
-```
+<CardGroup cols={3}>
+  <Card title="ROBOCON" icon="trophy" href="/competition/robocon">
+    全国大学生机器人大赛
+  </Card>
+  <Card title="RoboMaster" icon="robot">
+    机甲大师赛
+  </Card>
+  <Card title="智能车竞赛" icon="car">
+    全国大学生智能汽车竞赛
+  </Card>
+</CardGroup>
 
-### 启动本地服务
+### 定期活动
 
-```bash
-cd docs
-mint dev
-```
+- **技术分享会**：每月一次，成员分享技术心得
+- **代码审查日**：集体审查重要 PR，提高代码质量
+- **项目冲刺**：季度性集中开发活动
 
-默认在 http://localhost:3000 预览。
+## 学习与交流
 
-## 🌐 部署
+NEC 主仓库维护了一个 **`SKill` 分支**，沉淀技能教程、学习笔记、工具链说明等非代码资产：
 
-仓库已接入 Mintlify Git 集成。向 `main` 分支推送后自动部署到：
+- **机械设计**：SolidWorks / Fusion 360、3D 打印、CNC 加工工艺
+- **嵌入式开发**：STM32 / ESP32、电机驱动、传感器、RTOS
+- **算法**：OpenCV / YOLO、路径规划、运动控制、SLAM
+- **软件工程**：Git 工作流、ROS2、Python 工程化、CI/CD
+- **工具链**：飞书、Gitee、Markdown、开发环境配置
+- **竞赛经验**：ROBOCON / RM / 节能赛复盘、规则解读、备赛时间线
 
-- 仓库：https://github.com/new-energy-coder-club/docs
-- 在线站点：https://docs.newenergycoder.club/
+## 联系我们
 
-## 📝 文档格式
+<CardGroup cols={2}>
+  <Card
+    title="官方网站"
+    icon="globe"
+    href="https://www.newenergycoder.club/"
+  >
+    访问官网了解最新动态
+  </Card>
+  <Card
+    title="Gitee 仓库"
+    icon="code"
+    href="https://gitee.com/darrenpig/new_energy_coder_club"
+  >
+    查看项目代码，提交 Issue 和 PR
+  </Card>
+  <Card
+    title="GitHub 镜像"
+    icon="github"
+    href="https://github.com/Darrenpig/new_energy_coder_club"
+  >
+    GitHub 同步仓库，适合国际访问
+  </Card>
+  <Card
+    title="加入社区"
+    icon="message"
+    href="/community/join-collection"
+  >
+    扫码进入飞书/微信群
+  </Card>
+</CardGroup>
 
-本站使用 **MDX**（推荐）与 **Markdown** 两种格式：
+## 加入社区
 
-- `.mdx` — Mintlify 原生格式，支持 React 组件与 YAML frontmatter
-- `.md` — 普通 Markdown，可直接渲染
+无论你是：
 
-### 添加新页面
+- 🎓 **学生** - 想学习机器人技术
+- 👨‍💻 **工程师** - 想参与开源项目
+- 🏫 **教师** - 想寻找教学资源
+- 🏭 **企业** - 想寻找技术合作
 
-1. 在对应目录创建 `.mdx` 或 `.md` 文件。
-2. 在 `docs.json` 的 `navigation.tabs[].groups[].pages` 中加入文件路径（不含扩展名）。
+都欢迎加入 NEC 新能源开发者社区！
 
-示例：
-
-```json
-{
-  "group": "快速开始",
-  "pages": ["quickstart", "development", "your-new-page"]
-}
-```
-
-### 页面头部模板（MDX）
-
-```mdx
 ---
-title: "页面标题"
-description: "页面描述"
----
-```
 
-## 🔁 飞书 Wiki 导入
-
-仓库提供了 `tools/feishu-import/` 脚本，用于将 NEC 飞书 Wiki 顶层节点导入为 Markdown：
-
-```bash
-# 从父仓库进入工具目录
-cd ../tools/feishu-import
-
-# 导入顶层 Wiki 节点
-python import_wiki_top_level.py \
-  --source "https://scn0bdoc8zxg.feishu.cn/wiki/S10LwzVZdiWLwxkEnEqcTcmEn6e" \
-  --out-dir ../../docs/wiki
-```
-
-脚本说明：
-- `fetch_feishu_content.py`：修复 Windows 兼容性的 feishu-doc-webify 抓取脚本
-- `import_wiki_top_level.py`：将飞书 Wiki 顶层节点转换为 Markdown 并导入 `docs/wiki/`
-
-## 📚 参考资源
-
-- [Mintlify 文档](https://www.mintlify.com/docs)
-- [Mintlify 组件](https://www.mintlify.com/docs/content/components/frames)
-- [MDX 文档](https://mdxjs.com/)
-
-## 🤝 贡献
-
-如需更新文档，请：
-
-1. 修改相关 `.mdx` 或 `.md` 文件
-2. 本地运行 `mint dev` 预览
-3. 提交 PR 到主分支
-
-详细的贡献指南请参考：[CONTRIBUTING.md](../CONTRIBUTING.md)
+<Note>
+  本站为 NEC 文档站点，基于 <a href="https://mintlify.com">Mintlify</a> 构建，源码托管于 <a href="https://github.com/new-energy-coder-club/docs">GitHub</a>。如需了解文档维护方式，请参考 <a href="/development">本地开发指南</a> 与 <a href="/contributing/guidelines">贡献指南</a>。
+</Note>

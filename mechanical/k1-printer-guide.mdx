@@ -1,0 +1,192 @@
+---
+title: "K1 打印机使用说明书"
+description: "创想三维 K1 / K1-Max / K1C 3D 打印机使用指南：耗材选择、切片软件设置、打印流程与故障排查"
+---
+
+# K1 打印机使用说明书
+
+本文档整理了创想三维 K1 系列 3D 打印机的使用说明，涵盖耗材选择、切片软件设置、打印流程与常见故障排查。完整官方文档请访问 [Creality Wiki](https://wiki.creality.com/zh/k1-flagship-series/k1-max/quick-start-guide/printing-parameter-settings)。
+
+<Note>
+  K1 系列包括 K1、K1-Max、K1C、K1C Hi 等型号，本文通用设置均适用。
+</Note>
+
+## 使用前准备
+
+![K1 打印机基础操作](/images/k1-printer/image1.png)
+
+<Steps>
+  <Step title="确认耗材类型" icon="tag">
+    查看当前料盘或料仓中的耗材类型。实验室常用耗材为 PETG / PETG-CF，部分场景使用 PLA。
+  </Step>
+  <Step title="根据耗材切片" icon="file-code">
+    在切片软件中选择对应耗材和打印机型号，生成 `.gcode` 文件。
+  </Step>
+  <Step title="检查出料状态" icon="rotate">
+    如果进料正常但不出料，检查挤出机左侧拨杆是否闭合。
+
+    ![挤出机拨杆位置](/images/k1-printer/image3.png)
+  </Step>
+</Steps>
+
+<Warning>
+  PLA、PETG、ASA 材料的特性差异巨大，温度和速度参数不可混用。
+</Warning>
+
+![通用参数设置表](/images/k1-printer/image2.png)
+
+## 切片软件选择
+
+实验室推荐以下两款切片软件：
+
+<CardGroup cols={2}>
+  <Card title="Bambu Studio / BambuLab" icon="cube" href="https://bambulab.com/zh-cn/download">
+    拓竹官方切片软件，免费且易用，适合大多数打印任务
+  </Card>
+  <Card title="Creality Print" icon="print" href="https://wiki.creality.com/zh/software">
+    创想三维官方切片软件，支持远程打印。连接 A416 网络（A416A416A416）可直接扫描机器
+  </Card>
+</CardGroup>
+
+![BambuLab 软件](/images/k1-printer/image4.png)
+
+![Creality Print 下载](/images/k1-printer/image5.png)
+
+![Creality 软件界面](/images/k1-printer/image6.png)
+
+### 软件基础配置
+
+1. 切换为对应耗材（例如右上角 General PETG）
+2. 切换选择打印机型号（K1 / K1-Max / K1C / K1C Hi）
+
+![选择耗材](/images/k1-printer/image7.png)
+
+![选择打印机型号](/images/k1-printer/image8.png)
+
+喷嘴直径默认 **0.4 mm**：
+
+![喷嘴直径设置](/images/k1-printer/image9.png)
+
+更换 3D 打印机默认耗材：
+
+![更换耗材 1](/images/k1-printer/image10.png)
+
+![更换耗材 2](/images/k1-printer/image11.png)
+
+![更换耗材 3](/images/k1-printer/image12.png)
+
+检测并修改后，一般只需在两种耗材间选择：**PETG** / **PETG-CF**。
+
+## 核心切片流程
+
+下面以 BambuLab 为例，讲解切片软件的核心使用流程。
+
+![切片软件主界面](/images/k1-printer/image13.png)
+
+<Steps>
+  <Step title="启动软件并创建新工程" icon="play">
+    打开 BambuLab，点击创建新工程。
+  </Step>
+  <Step title="选择材料" icon="palette">
+    进入主界面后，在材料栏选择需要的耗材。
+
+    ![选择材料](/images/k1-printer/image14.png)
+  </Step>
+  <Step title="导入模型" icon="file-import">
+    拖入 `.STL` 或 `.stl` 后缀的模型文件。
+
+    ![拖入模型](/images/k1-printer/image15.png)
+  </Step>
+  <Step title="添加支撑" icon="layer-group">
+    根据模型实际情况添加支撑。可以自动添加，也可以手动绘制支撑区域。
+
+    ![添加支撑](/images/k1-printer/image16.png)
+
+    ![绘制支撑 1](/images/k1-printer/image17.png)
+
+    ![绘制支撑 2](/images/k1-printer/image18.png)
+
+    ![绘制支撑 3](/images/k1-printer/image19.png)
+
+    ![绘制支撑 4](/images/k1-printer/image20.png)
+  </Step>
+  <Step title="导出 G-code 并打印" icon="usb">
+    切片完成后，将 `.gcode` 文件拷贝到 U 盘，插入 K1 打印机。
+
+    在打印机界面选择第二个选项——**U 盘**。
+
+    ![U 盘打印](/images/k1-printer/image21.png)
+  </Step>
+</Steps>
+
+<Warning>
+  换过料后需要重新进料。如果之前的料正常出料，可以直接开始打印，无需重新调平。
+</Warning>
+
+![重新进料](/images/k1-printer/image22.png)
+
+![直接打印](/images/k1-printer/image23.png)
+
+## 高级技巧与视频教程
+
+- **调节耗材参数**：非拓竹材料调参全流程（[小红书](http://xhslink.com/o/AHFwOXwJJmc)）
+- **堵头通孔针处理**：[打印机堵头了怎么办？](http://xhslink.com/o/7QWfE2kBjBW)
+- **多色换料操作（无 CFS 版）**：[创想三维没有 CFS 照样打多色](http://xhslink.com/o/8lD5tU1IdVG)
+- **烘干耗材、进退料、处理料材打结、调平**等操作可参考 Creality Wiki 视频教程
+
+## 耗材采购参考
+
+> 以下为历史采购参考价格，实际价格以市场为准。
+
+| 耗材类型 | 参考价格 | 来源 |
+|---|---|---|
+| PLA CR | 22 元/卷 | 闲鱼 |
+| PLA CF | 65 元/卷 | 闲鱼 |
+| PETG CF | 50 元/卷 | 闲鱼 |
+| PPA CF | 390 元/卷 | 闲鱼（创想三维原厂） |
+| PLA 哑光 | 28 元/卷 | 闲鱼 |
+| 彩格 PETG | 17 元/卷 | 闲鱼 |
+| 高韧 PETG | 18 元/卷 | 闲鱼 |
+
+![耗材参考](/images/k1-printer/image24.png)
+
+## 故障排查
+
+<AccordionGroup>
+  <Accordion title="进料正常但不出料">
+    检查挤出机左侧拨杆是否闭合。拨杆闭合后才能正常出料。
+  </Accordion>
+  <Accordion title="堵头">
+    参考视频教程进行通孔针处理，或执行进退料操作清理堵头。
+  </Accordion>
+  <Accordion title="打印翘边/层间结合差">
+    1. 检查耗材是否受潮，必要时进行烘干
+    2. 确认热床温度与耗材类型匹配
+    3. 检查首层调平是否准确
+  </Accordion>
+</AccordionGroup>
+
+## 修订记录
+
+| 版本 | 作者 | 日期 | 说明 |
+|---|---|---|---|
+| 01 | DarrenPig | 25.08.01 | 初始版本 |
+| 02 | DarrenPig | 25.10.07 | 更新 K2/K1 资料，补充 CFS 与三角洲开源文件使用 |
+| 03 | DarrenPig | 26.01.30 | 更新视频教程与官方文档链接，补充结构件 Z 轴推荐 |
+| 04 | DarrenPig | 26.03.20 | 增加堵头案例 |
+
+## K1 高阶教程
+
+### 更换 Z 轴打印件
+
+参考 Printables 模型：[Creality K1 Adjustable Z Carriage CAD Files](https://www.printables.com/model/730698-creality-k1-adjustable-z-carriage-cad-files)
+
+![高级教程](/images/k1-printer/image25.png)
+
+## 相关资源
+
+- [Creality 官方软件下载](https://wiki.creality.com/zh/software)
+- [打印参数设置官方文档](https://wiki.creality.com/zh/k1-flagship-series/k1-max/quick-start-guide/printing-parameter-settings)
+- [主轴雕刻机操作指南](/mechanical/cnc-engraver-operation)
+- [Falcon2 激光雕刻机指南](/mechanical/falcon2-laser-engraver)
+- [A416 实验室](/community/a416-lab)

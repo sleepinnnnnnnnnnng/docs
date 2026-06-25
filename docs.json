@@ -39,6 +39,12 @@
         "tab": "文档",
         "groups": [
           {
+            "group": "重要文档",
+            "pages": [
+              "wiki/important-docs"
+            ]
+          },
+          {
             "group": "快速开始",
             "pages": [
               "quickstart",
@@ -51,7 +57,9 @@
               "start-here/curc2027-onboarding",
               "start-here/60min",
               "start-here/newcomers",
-              "start-here/first-good-issue"
+              "start-here/first-good-issue",
+              "learn/roles",
+              "learn/labels"
             ]
           },
           {
@@ -70,18 +78,12 @@
               "mechanical/chassis",
               "mechanical/cnc-engraver-operation",
               "mechanical/falcon2-laser-engraver",
+              "mechanical/k1-printer-guide",
               "vision/introduction",
               "vision/detection",
               "vision/localization",
               "embedded-software/introduction",
               "embedded-software/control"
-            ]
-          },
-          {
-            "group": "学习资源",
-            "pages": [
-              "learn/roles",
-              "learn/labels"
             ]
           },
           {
@@ -107,17 +109,17 @@
               "wiki/experience-index",
               "wiki/nec-plus-membership"
             ]
-          },
-          {
-            "group": "AI 工具",
-            "pages": [
-              "ai-tools/claude-code",
-              "ai-tools/cursor",
-              "ai-tools/windsurf",
-              "ai-tools/mcp-server",
-              "ai-tools/ai-feasibility-study"
-            ]
           }
+        ]
+      },
+      {
+        "tab": "AI 工具",
+        "pages": [
+          "ai-tools/claude-code",
+          "ai-tools/cursor",
+          "ai-tools/windsurf",
+          "ai-tools/mcp-server",
+          "ai-tools/ai-feasibility-study"
         ]
       },
       {

@@ -1,0 +1,76 @@
+# NEC 新能源开发者社区 — llms.txt
+
+> 面向机器人竞赛与真实工程项目的开源工程社区。
+> 关键词：NEC、常州工 NEC、新能源机器人、ROBOCON、开源社区、机器人竞赛、开发者社区
+
+## 站点概述
+
+NEC（New Energy Coder，新能源开发者社区）是一支立足常州工学院、面向全国的以学生与青年工程师为主体的开源技术社区。社区围绕全国大学生机器人大赛 ROBOCON、RoboMaster、智能车竞赛、节能减排等赛事，沉淀机械设计、嵌入式开发、机器视觉、运动控制、软件工程等领域的实战经验与开源代码，并通过 Mintlify 文档站、Gitee/GitHub 仓库与飞书知识库持续对外共享。
+
+- 文档站点：https://docs.newenergycoder.club/
+- 官方网站：https://www.newenergycoder.club/
+- Gitee 主仓库：https://gitee.com/darrenpig/new_energy_coder_club
+- GitHub 镜像：https://github.com/Darrenpig/new_energy_coder_club
+
+## 核心关键词
+
+NEC, 常州工 NEC, New Energy Coder, 新能源开发者社区, 新能源机器人, ROBOCON, 全国大学生机器人大赛, 机器人竞赛, 开源社区, 常州工学院, A416 实验室, 机器人控制, 嵌入式开发, 机器视觉, SLAM, ROS2, STM32, ESP32, YOLO, OpenCV, 机械设计, 3D 打印, 开源项目, Gitee, GitHub, 飞书知识库
+
+## 主要内容
+
+### 新人入门
+
+- **60 分钟加入 NEC** (`/start-here/60min`)：无需硬件，本地跑通 Demo 并提交第一个 PR。
+- **CURC 2027 新人 onboarding** (`/start-here/curc2027-onboarding`)：角色、路线与第一周任务。
+- **第一个 Good Issue** (`/start-here/first-good-issue`)：从文档贡献开始完成第一次 Pull Request。
+
+### 竞赛与赛季
+
+- **ROBOCON 备赛经验** (`/competition/robocon`)：全国大学生机器人大赛 ROBOCON 的备赛时间线、技术方案架构与常见问题 FAQ，含 2026 年比赛日程。
+- **竞赛概览** (`/competition/introduction`)：ROBOCON、节能减排、AIC 等赛事经验汇总。
+- **CURC 2026** (`/curc26/`)：2026 赛季机械、视觉、运营等 SIG 的赛季文档。
+
+### 技术专题
+
+- **机械设计** (`/mechanical/introduction`, `/mechanical/chassis`)：底盘、执行机构、传动方案。
+- **嵌入式软件** (`/embedded-software/introduction`, `/embedded-software/control`)：运动控制、任务调度、通信协议。
+- **机器视觉** (`/vision/introduction`, `/vision/detection`, `/vision/localization`)：目标检测、AprilTag、定位导航。
+- **项目模块** (`/modules/overview`, `/modules/robotics`, `/modules/embedded`, `/modules/algorithms`)：机器人控制、嵌入式、算法库总览。
+
+### 社区与贡献
+
+- **关于社区** (`/community/about`)：NEC 的起源、愿景、核心价值观与组织架构。
+- **加入社区** (`/community/join-collection`)：飞书/微信群入口与资料收集。
+- **A416 实验室** (`/community/a416-lab`)：常州工学院 A416 实验室线下协作空间。
+- **贡献指南** (`/contributing/guidelines`, `/contributing/workflow`, `/contributing/code-style`)：如何提交 PR、文档规范与代码风格。
+- **社区治理** (`/GOVERNANCE`, `/CODE_OF_CONDUCT`)：治理模型、行为准则与安全策略。
+
+### 知识库与资源
+
+- **Wiki 首页** (`/wiki/nec-wiki-home`)：飞书 Wiki 导出快照的入口。
+- **学习路径** (`/wiki/learning-path`)：从入门到精通的机器人学习路线。
+- **培训资源** (`/wiki/training-resources`)：会议记录、培训视频、群聊入口与资料库索引。
+- **资源索引** (`/resources`)：友链、开源框架与参考文献汇总。
+
+## 开源项目示例
+
+社区主仓库采用 [木兰宽松许可证第 2 版（Mulan PSL v2）](https://gitee.com/darrenpig/new_energy_coder_club/blob/master/LICENSE.md) 开源，主要项目包括：
+
+- **Duma 人形机器人**：1W 以内小型人形机器人开源项目。
+- **MechDog 轮腿机器狗**：基于 K230/KFS 的轮腿机器狗工程。
+- **5轴流体工作站**：智能能源管理系统。
+- **AGL on openEuler**：智能汽车 AGL 在 openEuler 上的适配。
+- **星闪手柄**：新一代无线通信技术验证。
+- **2025/2024 ROBOCON**：全国大学生机器人大赛赛季工程与复盘。
+
+## 联系方式
+
+- 官方网站：https://www.newenergycoder.club/
+- Gitee 仓库：https://gitee.com/darrenpig/new_energy_coder_club
+- GitHub 镜像：https://github.com/Darrenpig/new_energy_coder_club
+- 飞书知识库：https://scn0bdoc8zxg.feishu.cn/wiki/S10LwzVZdiWLwxkEnEqcTcmEn6e
+- 问题反馈：https://gitee.com/darrenpig/new_energy_coder_club/issues
+
+---
+
+最后更新：2026-06-26

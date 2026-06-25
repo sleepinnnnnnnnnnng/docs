@@ -1,0 +1,158 @@
+---
+title: "MCP Server 使用指南"
+description: "在 NEC 文档与工程工作流中接入 Model Context Protocol Server，扩展 AI 助手能力"
+icon: "server"
+---
+
+# MCP Server 使用指南
+
+**MCP（Model Context Protocol）** 是 Anthropic 提出的开放协议，用于让 AI 助手安全地连接外部数据源、工具和本地服务。通过接入 MCP Server，Claude Code、Cursor、Windsurf 等 AI 编辑器可以直接读取 Zotero 文献、飞书文档、本地文件、数据库等内容，大幅提升文档整理、代码编写和知识检索效率。
+
+## 核心概念
+
+```
+┌─────────────────┐     MCP 协议      ┌─────────────────┐
+│   AI 客户端      │  ◄────────────►  │   MCP Server    │
+│ (Claude/Cursor) │                   │ (Zotero/Lark/…) │
+└─────────────────┘                   └─────────────────┘
+                                             │
+                                             ▼
+                                        外部数据源
+                                     (文献/文档/数据库)
+```
+
+- **Host**：运行 AI 的客户端，如 Claude Desktop、Cursor、Windsurf、Claude Code。
+- **MCP Server**：提供具体能力的服务端，如读取 Zotero、查询飞书多维表格、操作本地文件。
+- **Transport**：通信方式，常见为 `stdio`（本地进程）或 `SSE`（网络服务）。
+
+## NEC 工作流中常用的 MCP Server
+
+<CardGroup cols={2}>
+  <Card title="Zotero MCP" icon="book-open">
+    检索文献、读取 PDF 摘要、管理参考文献。适合写论文、查资料、整理赛季调研文档。
+  </Card>
+  <Card title="Lark / 飞书 MCP" icon="message">
+    读取飞书文档、多维表格、任务、日程与会议纪要。适合协作办公与赛季信息管理。
+  </Card>
+  <Card title="Filesystem MCP" icon="folder-open">
+    让 AI 安全地读取、搜索和操作本地项目文件。适合批量文档处理与代码维护。
+  </Card>
+  <Card title="GitHub / Gitee MCP" icon="code">
+    查询 Issue、PR、仓库文件，辅助代码审查与贡献流程。
+  </Card>
+</CardGroup>
+
+## 安装与配置
+
+### 在 Claude Desktop 中使用
+
+1. 打开 **Claude Desktop → Settings → Developer → Edit Config**。
+2. 编辑 `claude_desktop_config.json`，添加需要的 MCP Server：
+
+```json
+{
+  "mcpServers": {
+    "zotero": {
+      "command": "uvx",
+      "args": ["zotero-mcp-server"]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path/to/your/project"]
+    }
+  }
+}
+```
+
+3. 保存后重启 Claude Desktop，在对话中即可调用 MCP 工具。
+
+### 在 Cursor 中使用
+
+1. 打开 **Cursor Settings → Features → MCP**。
+2. 点击 **Add New MCP Server**，输入名称、命令和参数。
+3. 或在项目根目录创建 `.cursor/mcp.json`：
+
+```json
+{
+  "mcpServers": {
+    "zotero": {
+      "command": "uvx",
+      "args": ["zotero-mcp-server"]
+    }
+  }
+}
+```
+
+4. 在 Cursor Chat 或 Composer 中直接请求 AI 调用 MCP 工具。
+
+### 在 Windsurf 中使用
+
+1. 打开 **Windsurf → Settings → Cascade → MCP Servers**。
+2. 添加 Server 配置，或在项目根目录创建 `.windsurf/mcp.json`。
+3. 在 Cascade 中描述任务，AI 会自动调用可用工具。
+
+## NEC 典型使用场景
+
+### 场景 1：赛季资料整理
+
+配合 **Zotero MCP**，让 AI 帮你：
+
+- 检索 ROBOCON 历届规则与技术论文
+- 生成文献综述和引用列表
+- 对比不同方案的技术路线
+
+示例指令：
+
+```text
+搜索我的 Zotero 库中关于 ROBOCON 运动控制的论文，整理一份对比表格。
+```
+
+### 场景 2：飞书 Wiki 同步
+
+配合 **Lark MCP**，让 AI 帮你：
+
+- 读取飞书 Wiki 中的赛季规划
+- 将文档内容转换为 Mintlify MDX
+- 更新会议纪要并生成待办
+
+示例指令：
+
+```text
+读取飞书 Wiki 中 CURC 2027 赛季规划页面，整理成 docs/wiki/ 下的 MDX 草案。
+```
+
+### 场景 3：本地文档批量维护
+
+配合 **Filesystem MCP**，让 AI 帮你：
+
+- 批量检查 MDX 文件的 frontmatter
+- 修复断链和格式问题
+- 统一术语翻译和标点风格
+
+示例指令：
+
+```text
+检查 docs/competition/robocon.mdx 的表格格式，确保所有时间列对齐。
+```
+
+## 安全与权限建议
+
+<Warning>
+  MCP Server 拥有访问本地文件或外部账号的权限，请遵循以下原则：
+</Warning>
+
+- 仅安装来自可信来源的 MCP Server。
+- 为 Filesystem MCP 配置最小可访问路径，避免暴露敏感目录。
+- 不要将 API Token、Cookie 等凭证写入公共仓库。
+- 定期检查已启用的 MCP Server，关闭不再使用的服务。
+
+## 常用资源
+
+- [Model Context Protocol 官方文档](https://modelcontextprotocol.io/)
+- [Anthropic MCP Server 示例](https://github.com/modelcontextprotocol/servers)
+- [Zotero MCP Server](https://github.com/kimi-mcp/zotero-mcp-server)
+- [NEC Gitee 仓库](https://gitee.com/darrenpig/new_energy_coder_club)
+
+<Note>
+  MCP 生态发展迅速，具体配置命令可能随版本更新而变化。请以各 MCP Server 的最新 README 为准。
+</Note>

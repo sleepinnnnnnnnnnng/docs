@@ -73,13 +73,6 @@
             ]
           },
           {
-            "group": "模板与规范",
-            "pages": [
-              "templates/project-template",
-              "templates/competition-template"
-            ]
-          },
-          {
             "group": "Wiki 知识库",
             "pages": [
               "wiki/nec-wiki-home",
@@ -100,7 +93,8 @@
             "pages": [
               "ai-tools/claude-code",
               "ai-tools/cursor",
-              "ai-tools/windsurf"
+              "ai-tools/windsurf",
+              "ai-tools/mcp-server"
             ]
           }
         ]

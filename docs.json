@@ -68,6 +68,7 @@
             "pages": [
               "mechanical/introduction",
               "mechanical/chassis",
+              "mechanical/cnc-engraver-operation",
               "vision/introduction",
               "vision/detection",
               "vision/localization",

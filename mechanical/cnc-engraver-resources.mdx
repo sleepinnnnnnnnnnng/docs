@@ -1,0 +1,71 @@
+---
+title: "主轴雕刻机原始资料下载"
+description: "NEC A416 实验室主轴雕刻机驱动、控制软件、精雕软件、NC 转换器与演示素材下载索引"
+---
+
+# 主轴雕刻机原始资料下载
+
+本页面提供 NEC A416 实验室主轴雕刻机配套原始资料的下载入口。所有文件均已整理为 ASCII 路径，可直接通过文档站下载。
+
+<Warning>
+  下载的 `.exe`、`.rar`、`.zip` 等文件请在可信任环境中使用。安装前建议先阅读 [软件安装指南](/mechanical/cnc-engraver-installation) 与 [操作流程](/mechanical/cnc-engraver-operation)。
+</Warning>
+
+## 软件与驱动
+
+| 文件 | 说明 | 大小 |
+|---|---|---|
+| [cnc-engraver-driver.exe](/resources/cnc-engraver/cnc-engraver-driver.exe) | 雕刻机 USB 驱动程序 | 228 KB |
+| [cnc-control-software.rar](/resources/cnc-engraver/cnc-control-software.rar) | CNC V4 控制软件压缩包 | 22.7 MB |
+| [jingdiao-setup.exe](/resources/cnc-engraver/jingdiao-setup.exe) | 精雕软件安装程序 | 7.4 MB |
+| [nc-converter.zip](/resources/cnc-engraver/nc-converter.zip) | 诺诚 NC 转换器（含依赖 DLL） | 5.3 MB |
+
+<Info>
+  精雕软件安装密码：`JA2CNC01`
+</Info>
+
+## 文档与说明
+
+| 文件 | 说明 | 大小 |
+|---|---|---|
+| [software-installation.pdf](/resources/cnc-engraver/software-installation.pdf) | 软件安装说明（原厂 PDF） | 802 KB |
+| [basic-operation.pdf](/resources/cnc-engraver/basic-operation.pdf) | 雕刻机基本操作（原厂 PDF） | 2.7 MB |
+| [readme.txt](/resources/cnc-engraver/readme.txt) | 资料包目录说明 | 1.8 KB |
+| [tips.txt](/resources/cnc-engraver/tips.txt) | 控制软件使用提示 | 0.4 KB |
+| [jingdiao-password.txt](/resources/cnc-engraver/jingdiao-password.txt) | 精雕安装密码 | <1 KB |
+
+## 演示素材
+
+| 文件 | 说明 | 大小 |
+|---|---|---|
+| [demo-materials.zip](/resources/cnc-engraver/demo-materials.zip) | 示例位图、DXF、测试刀路与浮雕 NC | 1.1 MB |
+
+解压后可得到：
+
+- `00.bmp` — 位图素材
+- `素材1.dxf` — CAD 矢量文件
+- `测试程序/测试刀路.cnc`
+- `测试程序/浮雕.nc`
+
+## 快速开始
+
+下载完成后，建议按以下顺序操作：
+
+<Steps>
+  <Step title="安装软件" href="/mechanical/cnc-engraver-installation">
+    安装驱动、控制软件、精雕软件与 NC 转换器。
+  </Step>
+  <Step title="生成刀路" href="/mechanical/cnc-engraver-toolpath">
+    使用精雕绘制图形、生成刀路并转换为 `.nc` 文件。
+  </Step>
+  <Step title="开始加工" href="/mechanical/cnc-engraver-operation">
+    连接雕刻机、对刀并启动加工。
+  </Step>
+</Steps>
+
+## 相关资源
+
+- [软件安装指南](/mechanical/cnc-engraver-installation)
+- [刀路生成与 NC 转换](/mechanical/cnc-engraver-toolpath)
+- [软件端加工操作](/mechanical/cnc-engraver-operation)
+- [机构设计概述](/mechanical/introduction)

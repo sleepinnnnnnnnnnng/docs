@@ -78,12 +78,20 @@
             "pages": [
               "mechanical/introduction",
               "mechanical/chassis",
-              "mechanical/cnc-engraver-installation",
-              "mechanical/cnc-engraver-toolpath",
-              "mechanical/cnc-engraver-operation",
-              "mechanical/cnc-engraver-resources",
-              "mechanical/falcon2-laser-engraver",
-              "mechanical/k1-printer-guide"
+              "mechanical/chassis-omniwheel",
+              "mechanical/chassis-mecanum",
+              {
+                "group": "设备与加工手册",
+                "icon": "wrench",
+                "pages": [
+                  "mechanical/cnc-engraver-installation",
+                  "mechanical/cnc-engraver-toolpath",
+                  "mechanical/cnc-engraver-operation",
+                  "mechanical/cnc-engraver-resources",
+                  "mechanical/falcon2-laser-engraver",
+                  "mechanical/k1-printer-guide"
+                ]
+              }
             ]
           },
           {

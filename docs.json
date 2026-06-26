@@ -41,20 +41,17 @@
         "tab": "文档",
         "groups": [
           {
-            "group": "重要文档",
-            "pages": [
-              "wiki/important-docs"
-            ]
-          },
-          {
             "group": "快速开始",
+            "icon": "rocket",
             "pages": [
+              "wiki/important-docs",
               "quickstart",
               "development"
             ]
           },
           {
             "group": "新手上路",
+            "icon": "graduation-cap",
             "pages": [
               "start-here/curc2027-onboarding",
               "start-here/newcomer-guide",
@@ -67,6 +64,7 @@
           },
           {
             "group": "项目模块",
+            "icon": "cubes",
             "pages": [
               "modules/overview",
               "modules/robotics",
@@ -76,6 +74,7 @@
           },
           {
             "group": "机构 SIG",
+            "icon": "gears",
             "pages": [
               "mechanical/introduction",
               "mechanical/chassis",
@@ -89,6 +88,7 @@
           },
           {
             "group": "视觉与嵌入式",
+            "icon": "eye",
             "pages": [
               "vision/introduction",
               "vision/detection",
@@ -104,6 +104,7 @@
           },
           {
             "group": "AI 工具",
+            "icon": "robot",
             "pages": [
               "ai-tools/claude-code",
               "ai-tools/cursor",
@@ -115,6 +116,7 @@
           },
           {
             "group": "模板与规范",
+            "icon": "file-lines",
             "pages": [
               "templates/project-template",
               "templates/competition-template",
@@ -256,7 +258,7 @@
           "icon": "robot"
         },
         {
-          "anchor": "SKill 分支文档",
+          "anchor": "Skill 分支文档",
           "href": "/community/skill-branch",
           "icon": "book-open"
         },

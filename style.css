@@ -1,4 +1,4 @@
-/* NEC 新能源开发者社区 — GitHub Dark × McKinsey Blue 视觉系统 v3 */
+/* NEC 新能源开发者社区 — GSAP-inspired dark × neon green 视觉系统 v4 */
 
 :root {
   /* Background layers - GitHub Dark */
@@ -7,17 +7,17 @@
   --bg-elevated: #21262d;
   --bg-code: #1e2530;
 
-  /* McKinsey Blue accent system */
-  --mck-primary: #0066ff;
-  --mck-primary-soft: #1a5fbd;
-  --mck-primary-dim: #0d3b66;
-  --mck-accent: #00a9ce;
+  /* GSAP neon green accent system */
+  --mck-primary: #0ae448;
+  --mck-primary-soft: #22c55e;
+  --mck-primary-dim: #14532d;
+  --mck-accent: #4ade80;
 
   /* Text hierarchy */
   --text-primary: #e6edf3;
   --text-secondary: #8b949e;
   --text-tertiary: #484f58;
-  --text-link: #58a6ff;
+  --text-link: #4ade80;
 
   /* Borders */
   --border-default: #30363d;
@@ -251,7 +251,7 @@ html.dark [class*="Card"]:hover {
   transform: translateY(-1px);
 }
 
-/* Card icons - outline style, McKinsey blue */
+/* Card icons - outline style, neon green */
 [class*="Card"] svg,
 [class*="Card"] [class*="icon"],
 html.dark [class*="Card"] svg,
@@ -499,7 +499,7 @@ html.dark .mint-button-group,
   margin: 20px 0 8px;
 }
 
-/* Primary button: McKinsey blue */
+/* Primary button: neon green */
 button[class*="primary"],
 a[class*="primary"],
 html.dark button[class*="primary"],
@@ -552,7 +552,7 @@ html.dark [class*="Card"] {
 html.dark [class*="Card"]:hover {
   border-color: var(--mck-primary);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 102, 255, 0.08);
+  box-shadow: 0 8px 24px rgba(10, 228, 72, 0.12);
 }
 
 /* Inline links inside cards should remain readable */
@@ -579,4 +579,109 @@ html.dark #content-wrapper h2 {
 #content-wrapper h2:first-of-type,
 html.dark #content-wrapper h2:first-of-type {
   margin-top: 32px;
+}
+
+/* =========================================================
+   GSAP-style homepage hero
+   ========================================================= */
+
+/* Centered hero section on homepage */
+.hero-gsap,
+html.dark .hero-gsap {
+  text-align: center;
+  padding: 64px 24px 32px;
+}
+
+.hero-gsap .hero-tagline,
+html.dark .hero-gsap .hero-tagline {
+  display: inline-block;
+  color: var(--mck-accent);
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+
+.hero-gsap .hero-tagline::before,
+html.dark .hero-gsap .hero-tagline::before {
+  content: "{ ";
+  color: var(--mck-primary);
+}
+
+.hero-gsap .hero-tagline::after,
+html.dark .hero-gsap .hero-tagline::after {
+  content: " }";
+  color: var(--mck-primary);
+}
+
+.hero-gsap h1,
+html.dark .hero-gsap h1 {
+  font-size: clamp(40px, 8vw, 96px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: var(--text-primary);
+  margin: 0 auto 24px;
+  max-width: 900px;
+}
+
+.hero-gsap .hero-subtitle,
+html.dark .hero-gsap .hero-subtitle {
+  font-size: 18px;
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+
+/* Fake centered search prompt (visual only) */
+.hero-search,
+html.dark .hero-search {
+  display: flex;
+  align-items: center;
+  max-width: 640px;
+  margin: 0 auto 40px;
+  padding: 14px 18px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: 999px;
+  color: var(--text-tertiary);
+  font-size: 14px;
+  cursor: text;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.hero-search:hover,
+html.dark .hero-search:hover {
+  border-color: var(--mck-primary);
+  box-shadow: 0 0 0 3px rgba(10, 228, 72, 0.1);
+}
+
+.hero-search svg,
+html.dark .hero-search svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 12px;
+  color: var(--text-tertiary);
+}
+
+.hero-search kbd,
+html.dark .hero-search kbd {
+  margin-left: auto;
+  padding: 4px 8px;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* Make hero banner blend with dark background */
+.hero-banner-img,
+html.dark .hero-banner-img {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 24px;
+  border-radius: var(--radius-xl);
 }

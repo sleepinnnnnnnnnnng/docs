@@ -1,4 +1,4 @@
-/* NEC 新能源开发者社区 — GSAP-inspired dark × neon green 视觉系统 v4 */
+/* NEC 新能源开发者社区 — GitHub Dark × McKinsey Blue 视觉系统 v3 */
 
 :root {
   /* Background layers - GitHub Dark */
@@ -7,17 +7,17 @@
   --bg-elevated: #21262d;
   --bg-code: #1e2530;
 
-  /* GSAP neon green accent system */
-  --mck-primary: #0ae448;
-  --mck-primary-soft: #22c55e;
-  --mck-primary-dim: #14532d;
-  --mck-accent: #4ade80;
+  /* McKinsey Blue accent system */
+  --mck-primary: #0066ff;
+  --mck-primary-soft: #1a5fbd;
+  --mck-primary-dim: #0d3b66;
+  --mck-accent: #00a9ce;
 
   /* Text hierarchy */
   --text-primary: #e6edf3;
   --text-secondary: #8b949e;
   --text-tertiary: #484f58;
-  --text-link: #4ade80;
+  --text-link: #58a6ff;
 
   /* Borders */
   --border-default: #30363d;
@@ -123,6 +123,9 @@ html.dark nav.sidebar a {
   margin: 2px var(--space-2);
   padding: 6px var(--space-3);
   transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 aside.sidebar a:hover,
@@ -133,7 +136,7 @@ html.dark nav.sidebar a:hover {
   background-color: var(--bg-elevated);
 }
 
-/* Active sidebar item - left blue indicator + dim background */
+/* Active sidebar item - subtle left indicator only */
 aside.sidebar [aria-current="page"],
 aside.sidebar a[data-active="true"],
 aside.sidebar a[aria-selected="true"],
@@ -146,10 +149,10 @@ html.dark aside.sidebar a[aria-selected="true"],
 html.dark nav.sidebar [aria-current="page"],
 html.dark nav.sidebar a[data-active="true"],
 html.dark nav.sidebar a[aria-selected="true"] {
-  color: var(--text-primary) !important;
-  background-color: var(--mck-primary-dim) !important;
-  border-left: 3px solid var(--mck-primary) !important;
-  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  color: var(--mck-primary) !important;
+  background-color: transparent !important;
+  border-left: 2px solid var(--mck-primary) !important;
+  border-radius: 0;
   font-weight: 500;
 }
 
@@ -205,7 +208,7 @@ html.dark [role="complementary"] a:hover {
   border-left-color: var(--text-tertiary);
 }
 
-/* Active TOC item - ONLY text color + left border */
+/* Active TOC item - subtle text color + left border */
 .toc [aria-current="true"],
 .toc a[data-active="true"],
 .toc a[aria-selected="true"],
@@ -224,10 +227,10 @@ html.dark [class*="toc"] a[aria-selected="true"],
 html.dark [role="complementary"] [aria-current="true"],
 html.dark [role="complementary"] a[data-active="true"],
 html.dark [role="complementary"] a[aria-selected="true"] {
-  color: var(--mck-primary) !important;
+  color: var(--text-link) !important;
   background-color: transparent !important;
   border-left-color: var(--mck-primary) !important;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* Cards */
@@ -251,7 +254,7 @@ html.dark [class*="Card"]:hover {
   transform: translateY(-1px);
 }
 
-/* Card icons - outline style, neon green */
+/* Card icons - outline style, McKinsey blue */
 [class*="Card"] svg,
 [class*="Card"] [class*="icon"],
 html.dark [class*="Card"] svg,
@@ -499,7 +502,7 @@ html.dark .mint-button-group,
   margin: 20px 0 8px;
 }
 
-/* Primary button: neon green */
+/* Primary button: McKinsey blue */
 button[class*="primary"],
 a[class*="primary"],
 html.dark button[class*="primary"],
@@ -552,7 +555,7 @@ html.dark [class*="Card"] {
 html.dark [class*="Card"]:hover {
   border-color: var(--mck-primary);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(10, 228, 72, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 102, 255, 0.08);
 }
 
 /* Inline links inside cards should remain readable */

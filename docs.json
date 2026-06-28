@@ -7,9 +7,9 @@
     "description": "面向机器人竞赛与真实工程项目的开源工程社区：沉淀 ROBOCON、RoboMaster、智能车等赛事的机械、嵌入式、机器视觉与运营经验。"
   },
   "colors": {
-    "primary": "#0AE448",
-    "light": "#4ADE80",
-    "dark": "#16A34A"
+    "primary": "#0066FF",
+    "light": "#58A6FF",
+    "dark": "#1A5FBD"
   },
   "appearance": {
     "default": "dark",

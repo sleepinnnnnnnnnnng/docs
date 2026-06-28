@@ -44,7 +44,7 @@
             "group": "快速开始",
             "icon": "rocket",
             "pages": [
-              "wiki/important-docs",
+              "start-here/index",
               "quickstart",
               "development"
             ]
@@ -215,6 +215,7 @@
             "group": "Wiki 入门",
             "pages": [
               "wiki/nec-wiki-home",
+              "wiki/important-docs",
               "wiki/start-here",
               "wiki/learning-path",
               "wiki/faq"

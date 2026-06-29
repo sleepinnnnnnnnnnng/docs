@@ -87,7 +87,8 @@
                   "mechanical/falcon2-laser-engraver",
                   "mechanical/k1-printer-guide"
                 ]
-              }
+              },
+              "mechanical/ek-team-25-mechanical-training"
             ]
           },
           {
@@ -227,7 +228,8 @@
               "wiki/hku-software-trainee",
               "wiki/tech-resources",
               "wiki/experience-index",
-              "wiki/nec-plus-membership"
+              "wiki/nec-plus-membership",
+              "wiki/cubemarsak70-10-kv100"
             ]
           }
         ]

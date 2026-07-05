@@ -247,12 +247,14 @@ def extract_external_links(text: str) -> set[str]:
 
 
 def target_exists(url: str) -> bool:
-    p = ROOT / url
-    if p.exists() and p.is_file():
-        return True
-    for ext in PAGE_EXTS:
-        if (p.with_suffix(ext)).is_file():
+    # 站点根路径可能对应 public/ 目录下的静态资源
+    candidates = [ROOT / url, ROOT / "public" / url.lstrip("/")]
+    for p in candidates:
+        if p.exists() and p.is_file():
             return True
+        for ext in PAGE_EXTS | ASSET_EXTS:
+            if (p.with_suffix(ext)).is_file():
+                return True
     return False
 
 
